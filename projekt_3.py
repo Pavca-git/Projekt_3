@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 import csv
 
 
-# spuštění projektu pro okres Třebíč:
+# spuštění projektu pro územní celek Třebíč:
 # python projekt_3.py "https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=10&xnumnuts=6104" "vysledky_trebic.csv"
 
 # fce 'arguments' pro získání vstupu do uživatele: název webové stánky 'url' a název výstupu 'csv'
@@ -134,7 +134,7 @@ location = location(soup) # proměnná 'location' - seznam názvů obcí
 # print(f"link {len(link)}")            # zobrazení délky listu 'link'
 # print(f"code {len(code)}")            # zobrazení délky listu 'code'
 # print(f"name_obec {len(location)}")   # zobrazení délky listu 'location'
-# 'soup_town' webové kódy jednotlivých obcí
+
 
 html_start = "https://volby.cz/pls/ps2017nss/" # začátek url odkazu
 html_first = requests.get(html_start+link[0]) # odkaz na první url
@@ -170,7 +170,6 @@ with open(vystup, mode="w", newline="") as new_csv:
     writer.writeheader()
     for i in range(0, len(link)):
         writer.writerow(list_dict[i])
-
 
 print("UKONČUJI Election Scraper.")
 
