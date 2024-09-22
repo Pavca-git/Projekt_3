@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 import csv
 
 
-# spuštění projektu pro okres Třebíč:
+# spuštění projektu pro územní celek Třebíč:
 # python projekt_3.py "https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=10&xnumnuts=6104" "vysledky_trebic.csv"
 
 # fce 'arguments' pro získání vstupu od uživatele: název webové stánky 'url' a název výstupu 'csv'
